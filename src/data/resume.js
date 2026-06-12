@@ -1,6 +1,6 @@
 export const RESUME = {
   pdfUrl: '/resume/rujula-padala-resume.pdf',
-  linkedInUrl: 'https://www.linkedin.com/in/rujulapadala',
+  linkedInUrl: 'https://www.linkedin.com/in/padmasai-rujula-padala-415370262/',
   email: 'rujula@example.com',
   hero: {
     title: 'Resume',

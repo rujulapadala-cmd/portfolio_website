@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { PROJECTS } from './data/projects'
+import { RESUME } from './data/resume'
 import CaseStudy from './components/CaseStudy'
 import ProjectCard from './components/ProjectCard'
 import HeroEditorialAtmosphere from './components/HeroEditorialAtmosphere'
@@ -221,7 +222,7 @@ function App() {
                 Send an email
               </a>
               <a
-                href="https://linkedin.com"
+                href={RESUME.linkedInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
