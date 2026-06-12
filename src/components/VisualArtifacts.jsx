@@ -1,8 +1,8 @@
 const THEMES = {
   projxon: { accent: '#E18AAA', soft: '#F5DCE0', lavender: '#DCCFED' },
-  sustain: { accent: '#8b9cf6', soft: '#EFCFD4', lavender: '#DCCFED' },
-  josyam: { accent: '#E18AAA', soft: '#2B2B2B', lavender: '#DCCFED' },
-  mindwell: { accent: '#E18AAA', soft: '#F8F4F5', lavender: '#DCCFED' },
+  sustain: { accent: '#6F57A8', soft: '#FBF8F2', lavender: '#F1EEF8' },
+  josyam: { accent: '#E8C26A', soft: '#EEF2FF', lavender: '#DCE7FF' },
+  mindwell: { accent: '#7BA892', soft: '#EEF4F5', lavender: '#DCE8E2' },
 }
 
 export function VisualArtifact({ type, projectId, label, caption }) {

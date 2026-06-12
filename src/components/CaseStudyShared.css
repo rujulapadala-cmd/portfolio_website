@@ -1,0 +1,224 @@
+/* ── Shared case study layout (all four project write-ups) ── */
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-hero > .fade-in,
+  .px-block > .fade-in,
+  .st-hero > .fade-in,
+  .st-block > .fade-in,
+  .jy-hero__inner,
+  .jy-block > .fade-in,
+  .mw-hero__inner,
+  .mw-block > .fade-in
+) {
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) .fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-reflection-grid,
+  .st-reflection-grid,
+  .jy-reflection-grid,
+  .mw-reflection-grid
+) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-reflection-card,
+  .st-reflection-card,
+  .jy-reflection-card,
+  .mw-reflection-card
+) {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-reflection-card h3,
+  .st-reflection-card h3,
+  .jy-reflection-card h3,
+  .mw-reflection-card h3
+) {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: #fff;
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-reflection-card ul,
+  .st-reflection-card ul,
+  .jy-reflection-card ul,
+  .mw-reflection-card ul
+) {
+  margin: 0;
+  padding-left: 18px;
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-reflection-card li,
+  .st-reflection-card li,
+  .jy-reflection-card li,
+  .mw-reflection-card li
+) {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-reflection-body,
+  .st-reflection-body,
+  .jy-reflection-body,
+  .mw-reflection-card p
+) {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-block--closing,
+  .st-block--closing,
+  .jy-block--closing,
+  .mw-block--closing
+) {
+  border-bottom: none;
+}
+
+:is(
+  .projxon-case-study,
+  .sustain-case-study,
+  .josyam-case-study,
+  .mindwell-case-study
+) :is(
+  .px-block--closing .px-title,
+  .st-block--closing .st-title,
+  .jy-block--closing .jy-title,
+  .mw-block--closing .mw-title
+) {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  :is(
+    .projxon-case-study,
+    .sustain-case-study,
+    .josyam-case-study,
+    .mindwell-case-study
+  ) :is(
+    .px-reflection-grid,
+    .st-reflection-grid,
+    .jy-reflection-grid,
+    .mw-reflection-grid
+  ) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  :is(
+    .projxon-case-study,
+    .sustain-case-study,
+    .josyam-case-study,
+    .mindwell-case-study
+  ) :is(
+    .px-hero > .fade-in,
+    .px-block > .fade-in,
+    .st-hero > .fade-in,
+    .st-block > .fade-in,
+    .jy-hero__inner,
+    .jy-block > .fade-in,
+    .mw-hero__inner,
+    .mw-block > .fade-in
+  ) {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(
+    .projxon-case-study,
+    .sustain-case-study,
+    .josyam-case-study,
+    .mindwell-case-study
+  ) .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -1,4 +1,8 @@
 import { VisualArtifact } from './VisualArtifacts'
+import ProjxonCaseStudy from './ProjxonCaseStudy'
+import SustainCaseStudy from './SustainCaseStudy'
+import JosyamCaseStudy from './JosyamCaseStudy'
+import MindWellCaseStudy from './MindWellCaseStudy'
 import './CaseStudy.css'
 
 function StorySection({ label, title, children, variant = 'default', id }) {
@@ -30,6 +34,22 @@ function DecisionCard({ title, rationale }) {
 }
 
 export default function CaseStudy({ project }) {
+  if (project.id === 'projxon') {
+    return <ProjxonCaseStudy project={project} />
+  }
+
+  if (project.id === 'sustain') {
+    return <SustainCaseStudy project={project} />
+  }
+
+  if (project.id === 'josyam') {
+    return <JosyamCaseStudy project={project} />
+  }
+
+  if (project.id === 'mindwell') {
+    return <MindWellCaseStudy project={project} />
+  }
+
   const s = project.story
 
   return (

@@ -1,28 +1,17 @@
 import { useState } from 'react'
 import { PROJECTS } from './data/projects'
 import CaseStudy from './components/CaseStudy'
+import ProjectCard from './components/ProjectCard'
+import HeroEditorialAtmosphere from './components/HeroEditorialAtmosphere'
+import ResumeSection from './components/ResumeSection'
 import './App.css'
+import './Home.css'
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Work', href: '#projects' },
+  { label: 'Resume', href: '#resume' },
   { label: 'Contact', href: '#contact' },
-]
-
-const SKILL_GROUPS = [
-  {
-    label: 'UX/UI',
-    items: ['Figma', 'Wireframing', 'Prototyping', 'User Research'],
-  },
-  {
-    label: 'Development',
-    items: ['React', 'Tailwind', 'HTML/CSS', 'JavaScript'],
-  },
-  {
-    label: 'Design',
-    items: ['Branding', 'Typography', 'Motion', 'Visual Systems'],
-  },
 ]
 
 function App() {
@@ -80,122 +69,83 @@ function App() {
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-glow hero-glow--left" aria-hidden="true" />
-          <div className="hero-glow hero-glow--right" aria-hidden="true" />
-
-          <div className="hero-content">
-            <p className="hero-eyebrow">UI/UX Designer</p>
-            <h1 className="hero-title">
-              Hi, I&apos;m{' '}
-              <span className="hero-title-accent">Rujula Padala</span>
-            </h1>
-            <p className="hero-subtitle">
-              I design emotionally thoughtful digital experiences — blending
-              human-centered research, accessibility, and visual storytelling
-              to create products people feel connected to.
-            </p>
-            <div className="hero-actions">
-              <a href="#projects" className="btn btn-primary">
-                View Projects
-              </a>
-              <a href="#about" className="btn btn-secondary">
-                About Me
-              </a>
-            </div>
+          <div className="hero-backdrop" aria-hidden="true">
+            <div className="hero-backdrop__gradient" />
+            <div className="hero-backdrop__glow hero-backdrop__glow--blush" />
+            <div className="hero-backdrop__glow hero-backdrop__glow--lavender" />
+            <div className="hero-backdrop__glow hero-backdrop__glow--peach" />
+            <HeroEditorialAtmosphere />
+            <div className="hero-backdrop__shimmer" />
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--star-a">
+              ✦
+            </span>
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--star-b">
+              ✧
+            </span>
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--star-c">
+              ✦
+            </span>
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--moon">
+              ☽
+            </span>
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--sparkle-a">
+              ✦
+            </span>
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--sparkle-b">
+              ✧
+            </span>
+            <span className="hero-backdrop__celestial hero-backdrop__celestial--sparkle-c">
+              ·
+            </span>
+            <div className="hero-backdrop__grain" />
           </div>
-        </section>
-
-        <section className="section" id="about">
-          <div className="section-inner">
-            <div className="section-header">
-              <span className="section-label">About</span>
-              <h2 className="section-title">Designing with empathy</h2>
-            </div>
-            <div className="about-grid">
-              <div className="about-text">
-                <p>
-                  I&apos;m a UI/UX designer passionate about creating intuitive,
-                  accessible digital experiences. With a background in informatics
-                  and a focus on human-centered design, I turn complex user
-                  needs into elegant, inclusive interfaces.
-                </p>
-                <p>
-                  When I&apos;m not designing, you&apos;ll find me researching
-                  user behavior, exploring visual systems, or prototyping ideas
-                  in Figma. I believe great design lives at the intersection
-                  of empathy, storytelling, and thoughtful craft.
-                </p>
+          <div className="hero-inner">
+            <div className="hero-content">
+              <div className="hero-heading">
+                <span className="hero-accent" aria-hidden="true">
+                  ✦
+                </span>
+                <p className="hero-greeting">Hi, I&apos;m</p>
+                <h1 className="hero-name">Rujula Padala</h1>
               </div>
-              <div className="about-card">
-                <div className="about-stat">
-                  <span className="about-stat-number">4</span>
-                  <span className="about-stat-label">Featured projects</span>
-                </div>
-                <div className="about-stat">
-                  <span className="about-stat-number">80+</span>
-                  <span className="about-stat-label">Users supported</span>
-                </div>
-                <div className="about-stat">
-                  <span className="about-stat-number">∞</span>
-                  <span className="about-stat-label">Ideas sketched</span>
-                </div>
+              <p className="hero-role">
+                UI/UX Designer · Informatics &amp; Psychology Student
+              </p>
+              <p className="hero-lede">
+                Designing thoughtful digital experiences at the intersection of
+                psychology, research, storytelling, and systems thinking.
+              </p>
+              <p className="hero-credibility">
+                Projxon · NeuroNext Foundation · Aid4Need · UTeach · HackTX
+              </p>
+              <p className="hero-school">UT Austin</p>
+              <div className="hero-actions">
+                <a href="#projects" className="btn btn-primary">
+                  View Work
+                </a>
+                <a href="#resume" className="btn btn-secondary">
+                  Resume
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="section section--muted" id="projects">
-          <div className="section-inner">
-            <div className="section-header">
-              <span className="section-label">Selected Work</span>
-              <h2 className="section-title">Featured case studies</h2>
-            </div>
+        <section className="featured-work" id="projects">
+          <div className="featured-work__inner">
+            <header className="featured-work__header">
+              <span className="featured-work__label">Featured work</span>
+              <h2 className="featured-work__title">Selected projects</h2>
+            </header>
 
-            <div className="projects-editorial">
-              {PROJECTS.map((project, index) => (
-                <article
+            <div className="featured-work__grid">
+              {PROJECTS.map((project) => (
+                <ProjectCard
                   key={project.id}
-                  className={`project-block${index % 2 === 1 ? ' project-block--reverse' : ''}`}
-                >
-                  <div
-                    className="project-block-visual"
-                    style={{ background: project.gradient }}
-                    aria-hidden="true"
-                  >
-                    <div className="project-block-mockup">
-                      <div className="mockup-bar" />
-                      <div className="mockup-content" />
-                    </div>
-                  </div>
-
-                  <div className="project-block-body">
-                    <span className="project-block-category">
-                      {project.category}
-                    </span>
-                    <h3 className="project-block-title">{project.title}</h3>
-                    <p className="project-block-subtitle">{project.subtitle}</p>
-                    <div className="project-block-meta">
-                      <span>{project.role}</span>
-                      <span className="meta-divider">·</span>
-                      <span>{project.timeline}</span>
-                    </div>
-                    <ul className="project-block-impact">
-                      {project.impact.slice(0, 2).map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                    <button
-                      type="button"
-                      className="btn btn-primary btn-case-study"
-                      aria-expanded={expandedProject === project.id}
-                      onClick={() => toggleCaseStudy(project.id)}
-                    >
-                      {expandedProject === project.id
-                        ? 'Close Case Study'
-                        : 'View Case Study'}
-                    </button>
-                  </div>
-                </article>
+                  project={project}
+                  isExpanded={expandedProject === project.id}
+                  onToggle={() => toggleCaseStudy(project.id)}
+                />
               ))}
             </div>
 
@@ -207,32 +157,55 @@ function App() {
           </div>
         </section>
 
-        <section className="section" id="skills">
+        <section className="section" id="about">
           <div className="section-inner">
             <div className="section-header">
-              <span className="section-label">Expertise</span>
-              <h2 className="section-title">Skills &amp; tools</h2>
+              <span className="section-label">About</span>
+              <h2 className="section-title">About Me</h2>
             </div>
-            <div className="skills-groups">
-              {SKILL_GROUPS.map((group) => (
-                <div key={group.label} className="skill-group">
-                  <h3 className="skill-group-label">{group.label}</h3>
-                  <ul className="skills-grid">
-                    {group.items.map((skill) => (
-                      <li key={skill} className="skill-pill">
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
+            <div className="about-grid">
+              <div className="about-text">
+                <p>
+                  My name is Rujula Padala, and I am a student at The University
+                  of Texas at Austin studying Informatics and Psychology. As an
+                  aspiring UI/UX designer, I am passionate about creating thoughtful
+                  digital experiences that balance user needs, business goals, and
+                  visual storytelling.
+                </p>
+                <p>
+                  Through academic projects, design initiatives, and leadership
+                  experiences, I have developed skills in user research, interface
+                  design, prototyping, and cross-functional collaboration. I am
+                  eager to continue growing as a designer by building products that
+                  make complex information feel intuitive, accessible, and human.
+                </p>
+              </div>
+              <div className="about-card">
+                <div className="about-stat">
+                  <span className="about-stat-number about-stat-number--text">Informatics &amp; Psychology</span>
+                  <span className="about-stat-label">Academic background</span>
                 </div>
-              ))}
+                <div className="about-stat">
+                  <span className="about-stat-number">4+</span>
+                  <span className="about-stat-label">Featured Projects</span>
+                </div>
+                <div className="about-stat">
+                  <span className="about-stat-number">6+</span>
+                  <span className="about-stat-label">Organizations &amp; Teams</span>
+                </div>
+                <div className="about-stat">
+                  <span className="about-stat-number">100+</span>
+                  <span className="about-stat-label">Professionals Supported</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
+        <ResumeSection />
+
         <section className="section section--contact" id="contact">
           <div className="section-inner contact-inner">
-            <div className="contact-glow" aria-hidden="true" />
             <div className="section-header section-header--center">
               <span className="section-label">Contact</span>
               <h2 className="section-title">

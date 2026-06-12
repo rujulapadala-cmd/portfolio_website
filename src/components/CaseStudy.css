@@ -2,6 +2,23 @@
 .case-study-story {
   margin-top: 80px;
   animation: csFadeIn 0.5s ease;
+  font-family: var(--font-sans);
+}
+
+.case-study-story :is(
+  .cs-hero-title,
+  .cs-heading,
+  .cs-pull-quote,
+  .cs-decision h4,
+  .cs-challenge-card h4,
+  .cs-closing-quote
+) {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+.case-study-story :is(.cs-pull-quote, .cs-closing-quote) {
+  font-style: italic;
 }
 
 @keyframes csFadeIn {
@@ -36,7 +53,6 @@
 .cs-hero-title {
   margin: 0 0 16px;
   font-size: clamp(32px, 5vw, 52px);
-  font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.05;
   color: #2B2B2B;
@@ -109,7 +125,6 @@
 .cs-heading {
   margin: 0 0 32px;
   font-size: clamp(24px, 3.5vw, 36px);
-  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.15;
   color: #2B2B2B;
@@ -120,7 +135,6 @@
   padding: 0;
   border: none;
   font-size: clamp(22px, 3vw, 32px);
-  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.35;
   color: #2B2B2B;
@@ -283,7 +297,6 @@
 .cs-decision h4 {
   margin: 0 0 10px;
   font-size: 16px;
-  font-weight: 600;
   color: #2B2B2B;
 }
 
@@ -374,7 +387,6 @@
 .cs-challenge-card h4 {
   margin: 0 0 12px;
   font-size: 17px;
-  font-weight: 600;
   color: #2B2B2B;
 }
 

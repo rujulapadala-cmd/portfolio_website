@@ -1,9 +1,11 @@
 export const PROJECTS = [
   {
     id: 'projxon',
-    title: 'PROJXON Operations Dashboard',
+    shortTitle: 'PROJXON',
+    image: '/images/work/projxon-dashboard.png',
+    title: 'PROJXON: Redesigning request tracking',
     subtitle:
-      'Transforming fragmented workflows into a unified operational system for 80+ employees across 6 teams.',
+      'Seven teams tracked requests in Google Sheets. I redesigned how 80+ people find and read that data — with a separate Looker dashboard for each team.',
     category: 'Product Design',
     role: 'UI/UX Designer & Workspace Manager Intern',
     timeline: '2026',
@@ -15,11 +17,20 @@ export const PROJECTS = [
       'HTML Widgets',
     ],
     gradient: 'linear-gradient(135deg, #F5DCE0 0%, #DCCFED 100%)',
+    showcase: {
+      visual: 'dashboard',
+      displayCategory: 'Operational UX & Systems Design',
+      tagline: 'Supporting 80+ employees across seven request workflows.',
+      hero: {
+        src: '/images/work/projxon-dashboard.png',
+        alt: 'PROJXON Looker dashboard showing request status and team metrics',
+      },
+    },
     impact: [
       'Supported 80+ employees',
-      'Unified 7 systems',
-      'Reduced retrieval time by 40%',
-      'Improved data quality by 65%',
+      'Redesigned 7 request systems',
+      '40% less time finding information',
+      '65% cleaner data',
     ],
     problem: {
       points: [
@@ -41,82 +52,95 @@ export const PROJECTS = [
     },
     story: {
       heroVisual: 'dashboard',
-      heroCaption: 'Unified operations dashboard — executive and team views',
-      hook: 'Seven tools. Six teams. One problem — nobody could find what they needed.',
+      heroCaption: 'Seven Looker dashboards — one per team, same layout',
+      hook: 'Seven teams tracked requests in spreadsheets. Leaders still had to filter rows by hand to find answers.',
       opener:
-        'When I joined PROJXON as a Workspace Manager Intern, I noticed something immediately: operational knowledge lived everywhere and nowhere at once. Spreadsheets, Looker dashboards, docs, and trackers each held a piece of the puzzle. My mission was to design a single source of truth that felt intuitive for 80+ people — not just functional, but genuinely usable.',
+        'When I joined PROJXON, each team had its own Google Sheet for service feature requests. My job was to make that data easier to read — without forcing seven different teams into one tool.',
       myRole:
-        'I led the end-to-end UX for consolidating PROJXON\'s operational ecosystem. Beyond interface design, I audited existing trackers, mapped information architecture, standardized SFR workflows, and built custom HTML widgets and dashboards in Looker Studio and Lovable. I worked directly with team leads and operations managers to validate every design decision.',
-      challengeTitle: 'Scaling chaos across growing teams',
+        'I reviewed every tracker, cleaned up field names, designed dashboards in Looker Studio, reorganized onboarding docs, and built HTML widgets for the workspace.',
+      challengeTitle: 'The data was there — finding it was the hard part',
       challengeNarrative:
-        'As PROJXON expanded, each team built their own workarounds. What started as flexibility became fragmentation — duplicated entries, mismatched status labels, and onboarding paths that confused new members. Operational UX wasn\'t a nice-to-have; it was becoming a bottleneck.',
-      challengeCaption: 'Mapping 7 disconnected systems before consolidation',
+        'Teams logged requests fine. But when someone needed totals, trends, or bottlenecks, they opened a sheet and filtered it manually. Seven teams meant seven different ways of doing that.',
+      challengeCaption: 'Original Google Sheets tracker before the redesign',
       keyContributions: [
-        'Audited and documented all existing operational trackers',
-        'Designed unified information architecture for SFRs and onboarding',
-        'Built executive, team, and SFR management dashboard views',
-        'Standardized status labels and data fields across 6 teams',
-        'Created custom widgets and onboarding experiences',
+        'Reviewed all seven request trackers',
+        'Standardized field names across teams',
+        'Built a Looker dashboard for each team',
+        'Reorganized onboarding docs',
+        'Created HTML workspace widgets',
       ],
-      flowCaption: 'End-to-end operational workflow after redesign',
+      flowCaption: 'How a request moves from log to dashboard view',
       researchNarrative:
-        'I shadowed team leads and interviewed new interns to understand where friction lived. The pattern was clear: people weren\'t failing to work hard — they were failing to find things. I mapped pain points across every existing tool and used those insights to prioritize what the unified system needed to surface first.',
-      wireframeCaption: 'Early dashboard hierarchy and navigation explorations',
+        'I walked through each tracker with team leads and wrote down what fields they used and what questions they asked most.',
+      wireframeCaption: 'Dashboard layout — built once, adapted for each team',
       decisionsIntro:
-        'Every design choice was weighed against one question: will this reduce retrieval time for someone who\'s never seen this system before?',
+        'Every choice came down to: will this save someone from sorting a spreadsheet today?',
       designDecisions: [
         {
-          title: 'Role-based dashboard views',
-          rationale: 'Executives need summaries; team leads need detail. Splitting views by role prevented information overload while keeping a shared data layer.',
+          title: 'Separate dashboard per team',
+          rationale: 'Legal and Workshops need different views. One shared dashboard would have hidden what each team actually cared about.',
         },
         {
-          title: 'Standardized status taxonomy',
-          rationale: 'Teams used different labels for the same states. A unified status system eliminated confusion and made cross-team reporting possible.',
+          title: 'Same layout everywhere',
+          rationale: 'If you learned the Operations dashboard, the Legal one felt familiar — same charts, different data.',
         },
         {
-          title: 'Progressive disclosure in SFR tracking',
-          rationale: 'Not every user needs every field. Core info surfaces first; advanced details expand on demand — reducing cognitive load for new members.',
+          title: 'Charts instead of rows',
+          rationale: 'Status counts, type breakdowns, and trends belong in visuals — not in filtered columns.',
         },
       ],
-      systemCaption: 'Consistent components, colors, and status indicators across all views',
-      solutionTitle: 'One ecosystem, every team',
+      systemCaption: 'Same dashboard structure applied across all seven teams',
+      solutionTitle: 'Seven dashboards shipped in Looker Studio',
       solutionNarrative:
-        'The final system brought SFR tracking, onboarding resources, and team operations into a cohesive dashboard. Custom widgets surfaced the right data at the right time, and navigation finally reflected how people actually worked — not how the tools were originally built.',
+        'Each team got their own dashboard. Sheets stayed for data entry; Looker handled the reading.',
       outcomeStats: [
-        { value: '80+', label: 'Employees supported' },
-        { value: '7→1', label: 'Systems unified' },
-        { value: '40%', label: 'Faster retrieval' },
-        { value: '65%', label: 'Better data quality' },
+        { value: '80+', label: 'People using the tools' },
+        { value: '7', label: 'Systems redesigned' },
+        { value: '40%', label: 'Less time searching' },
+        { value: '65%', label: 'Cleaner data' },
       ],
       challenges: [
         {
-          title: 'Balancing simplicity with depth',
-          description: 'Power users needed granular controls while new members needed guardrails. Iterating on progressive disclosure was essential.',
+          title: 'Same enough, different enough',
+          description: 'Teams wanted consistency but not a copy-paste job.',
         },
         {
-          title: 'Aligning 6 teams on one system',
-          description: 'Each team had entrenched habits. Design alone couldn\'t solve adoption — I paired interface changes with workflow documentation and training.',
+          title: 'Building seven dashboards, not seven one-offs',
+          description: 'I designed the Operations version first and reused the structure.',
         },
       ],
       lessonsLearned: [
-        'Operational UX is invisible until it breaks — then it\'s everything.',
-        'Design systems for operations must scale with the org, not just the current team size.',
-        'Standardization is a design decision, not just a technical one.',
+        'Internal tools fail when you design before you understand how people actually work.',
+        'Spreadsheets aren\'t the enemy — they just aren\'t built for overview questions.',
+        'The best fix is often making data readable, not replacing the tool entirely.',
       ],
       closingQuote:
-        'This project taught me that the best operational design doesn\'t add features — it removes the need to search.',
+        'The hardest part wasn\'t the charts — it was figuring out how much to keep the same across teams and how much to leave alone.',
     },
   },
   {
     id: 'sustain',
-    title: 'sustAIn',
+    shortTitle: 'SustAIn',
+    image: '/images/work/sustain-map.png',
+    title: 'SustAIn',
     subtitle:
-      'Helping organizations identify sustainable data center locations through AI-powered decision support.',
-    category: 'UX/UI',
+      'Finding smarter locations for sustainable data centers.',
+    category: 'UX/UI Design · AI · Sustainability',
     role: 'UX/UI Designer',
-    timeline: 'Hackathon Project',
+    timeline: '4-Hour Hackathon',
+    liveUrl: 'https://sustain-data-centers.vercel.app/',
     tools: ['Figma', 'React', 'Tailwind', 'Mapbox'],
     gradient: 'linear-gradient(135deg, #EFCFD4 0%, #DCCFED 50%, #F8F4F5 100%)',
+    showcase: {
+      visual: 'map',
+      displayCategory: 'AI Sustainability Platform',
+      tagline:
+        'Finding smarter locations for sustainable data centers.',
+      hero: {
+        src: '/images/work/sustain-map.png',
+        alt: 'SustAIn interactive map with sustainability scoring layers',
+      },
+    },
     impact: [
       'Simplified complex geographic datasets',
       'Improved decision confidence',
@@ -142,7 +166,7 @@ export const PROJECTS = [
       heroCaption: 'Interactive sustainability map with AI-powered scoring',
       hook: 'Choosing where to build shouldn\'t require a PhD in GIS.',
       opener:
-        'Data center site selection involves dozens of variables — renewable energy access, fiber connectivity, grid infrastructure, environmental impact. During a 48-hour hackathon, our team set out to make this decision feel human again: visual, comparable, and confident.',
+        'Data center site selection involves dozens of variables — renewable energy access, fiber connectivity, grid infrastructure, environmental impact. During a 4-hour hackathon, our team set out to make this decision feel human again: visual, comparable, and confident.',
       myRole:
         'As the sole UX/UI designer, I owned user research synthesis, journey mapping, wireframing, visual design, and the interactive map interface. I translated complex sustainability metrics into scannable visual layers and designed the AI scoring system\'s presentation.',
       challengeTitle: 'Complexity without clarity',
@@ -161,7 +185,7 @@ export const PROJECTS = [
         'I analyzed existing sustainability mapping tools and GIS dashboards to identify where users dropped off. The pattern: too much data, too little guidance. I focused design on progressive disclosure — show the score first, let users drill into the why.',
       wireframeCaption: 'Map exploration, filters, and scoring dashboard iterations',
       decisionsIntro:
-        'With 48 hours on the clock, every design decision had to reduce time-to-insight.',
+        'With four hours on the clock, every design decision had to reduce time-to-insight.',
       designDecisions: [
         {
           title: 'AI score as the entry point',
@@ -183,7 +207,7 @@ export const PROJECTS = [
       outcomeStats: [
         { value: '4', label: 'Decision stages mapped' },
         { value: '3', label: 'Map layers designed' },
-        { value: '48hr', label: 'Hackathon sprint' },
+        { value: '4hr', label: 'Hackathon sprint' },
       ],
       challenges: [
         {
@@ -206,14 +230,27 @@ export const PROJECTS = [
   },
   {
     id: 'josyam',
+    shortTitle: 'Josyam',
+    image: '/images/work/josyam-ui.png',
     title: 'Josyam',
     subtitle:
-      'Reimagining traditional storytelling through interactive digital experiences.',
+      'Reimagining Indian parrot fortune-telling as an interactive storytelling ritual.',
     category: 'Product Design',
     role: 'Lead UX/UI Designer',
-    timeline: '2026',
-    tools: ['React', 'Node.js', 'Tailwind CSS', 'Framer Motion', 'Gemini API'],
-    gradient: 'linear-gradient(135deg, #2B2B2B 0%, #DCCFED 40%, #E18AAA 100%)',
+    timeline: '24 Hours',
+    tools: ['React', 'Gemini', 'Tailwind', 'Node.js', 'Framer Motion', 'Canva/Figma'],
+    liveUrl: 'https://josyam.vercel.app/',
+    gradient: 'linear-gradient(135deg, #EEF2FF 0%, #DCE7FF 50%, #E8C26A 100%)',
+    showcase: {
+      visual: 'artwork',
+      displayCategory: 'Interactive Cultural Storytelling',
+      tagline:
+        'Reimagining Indian parrot fortune-telling as an interactive storytelling ritual.',
+      hero: {
+        src: '/images/work/josyam-cards.png',
+        alt: 'Josyam fortune card deck with celestial illustrations',
+      },
+    },
     impact: [
       'Preserved cultural authenticity in digital form',
       'Created emotionally engaging interactions',
@@ -268,8 +305,8 @@ export const PROJECTS = [
           rationale: 'The chatbot reflects and asks — it doesn\'t lecture. This preserves agency and makes readings feel personal rather than algorithmic.',
         },
         {
-          title: 'Dark celestial visual language',
-          rationale: 'Deep tones and soft glows create intimacy. The interface feels like a night sky — contemplative, not clinical.',
+          title: 'Light celestial visual language',
+          rationale: 'Moonlit blues and gold accents create intimacy without heaviness. The interface feels contemplative and warm — not clinical, not gimmicky.',
         },
       ],
       systemCaption: 'Celestial color palette, typography, and motion principles',
@@ -302,6 +339,8 @@ export const PROJECTS = [
   },
   {
     id: 'mindwell',
+    shortTitle: 'MindWell',
+    image: '/images/work/mindwell-ui.png',
     title: 'MindWell',
     subtitle:
       'Designing a calmer and more supportive mental health experience.',
@@ -309,7 +348,17 @@ export const PROJECTS = [
     role: 'Product Designer',
     timeline: '2026',
     tools: ['Figma', 'User Research', 'Prototyping'],
-    gradient: 'linear-gradient(135deg, #F8F4F5 0%, #EFCFD4 50%, #DCCFED 100%)',
+    gradient: 'linear-gradient(135deg, #FAFBFC 0%, #DCE8E2 50%, #DDE8F7 100%)',
+    showcase: {
+      visual: 'phone',
+      displayCategory: 'Mental Health Product Design',
+      tagline:
+        'A calmer check-in and journaling experience designed for emotional safety.',
+      hero: {
+        src: '/images/work/mindwell-ui.png',
+        alt: 'MindWell mobile app with gentle mood check-in screen',
+      },
+    },
     impact: [
       'Reduced cognitive overwhelm',
       'Encouraged sustainable wellness habits',
