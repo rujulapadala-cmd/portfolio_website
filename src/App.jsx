@@ -28,15 +28,9 @@ const NAV_LINKS = [
 
 function initialIntro() {
   if (typeof window === 'undefined') return { playing: false, ready: true, instant: true }
+  // The intro plays on every visit; only people who ask for reduced motion skip it.
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  const force = new URLSearchParams(window.location.search).has('intro')
-  let seen = false
-  try {
-    seen = window.sessionStorage.getItem('intro-seen') === '1'
-  } catch {
-    /* storage unavailable: treat as unseen */
-  }
-  if (reduce || (seen && !force)) return { playing: false, ready: true, instant: true }
+  if (reduce) return { playing: false, ready: true, instant: true }
   return { playing: true, ready: false, instant: false }
 }
 
@@ -45,11 +39,6 @@ function App() {
 
   useEffect(() => {
     if (!intro.playing) return undefined
-    try {
-      window.sessionStorage.setItem('intro-seen', '1')
-    } catch {
-      /* storage unavailable: intro simply replays next visit */
-    }
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     const timer = setTimeout(
