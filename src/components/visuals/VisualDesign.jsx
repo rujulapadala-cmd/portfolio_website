@@ -192,8 +192,7 @@ export default function VisualDesign() {
     <section className="vd" id="visuals">
       <div className="vd-inner">
         <header className="vd-head">
-          <span className="vd-label">Visual design</span>
-          <h2 className="vd-title">Posters &amp; campaigns</h2>
+          <h2 className="vd-title">Visual design</h2>
           <p className="vd-lede">
             Design work for the clubs and communities I’ve been part of. Open a collection to see full
             pieces and series.

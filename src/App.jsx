@@ -6,7 +6,6 @@ import Hero from './components/home/Hero'
 import SelectedWork from './components/work/SelectedWork'
 import Intro from './components/home/Intro'
 import CustomCursor from './components/home/CustomCursor'
-import OrgStrip from './components/home/OrgStrip'
 import { ORGANIZATIONS } from './components/home/homeData'
 import ResumeSection from './components/ResumeSection'
 import VisualDesign from './components/visuals/VisualDesign'
@@ -148,12 +147,9 @@ function App() {
           <Hero ready={intro.ready} instant={intro.instant} />
         </section>
 
-        <OrgStrip />
-
         <section className="featured-work" id="projects">
           <div className="featured-work__inner">
             <header className="featured-work__header">
-              <span className="featured-work__label">Selected work</span>
               <h2 className="featured-work__title">Selected projects</h2>
             </header>
 
@@ -173,7 +169,6 @@ function App() {
         <section className="section" id="about">
           <div className="section-inner">
             <div className="section-header">
-              <span className="section-label">About</span>
               <h2 className="section-title">About Me</h2>
             </div>
             <div className="about-grid">
