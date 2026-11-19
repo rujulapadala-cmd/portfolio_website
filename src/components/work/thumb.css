@@ -1,0 +1,199 @@
+/* Project thumbnails: the front page inside a soft browser window */
+.st {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--s1, #152854), var(--s2, #3f678a));
+}
+
+.st--projxon,
+.st--glasshouse,
+.st--sustain,
+.st--josyam,
+.st--mindwell { --s1: #0e1a38; --s2: #19294f; }
+
+.st-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 10%, rgba(150, 180, 230, 0.12), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 10% 100%, rgba(110, 130, 200, 0.1), transparent 70%);
+}
+
+.st-win {
+  position: absolute;
+  top: 9%;
+  right: 8%;
+  bottom: -14%;
+  left: 8%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 26px 60px rgba(4, 9, 20, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.st-bar {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 12px;
+  background: #101e40;
+}
+
+.st-bar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(225, 235, 250, 0.45);
+}
+
+.st-url {
+  position: absolute;
+  left: 50%;
+  max-width: 60%;
+  padding: 2px 14px;
+  overflow: hidden;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  color: #c8cfe8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  transform: translateX(-50%);
+}
+
+.st-page {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.st-page img,
+.st-page svg {
+  display: block;
+  width: 100%;
+}
+
+.st-page img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.st-tag {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  z-index: 2;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #142752;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+}
+
+/* ── Themed finish: dark stage, fine grid, glow, fade into the card ── */
+.st {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(110, 168, 255, 0.22), transparent 70%),
+    linear-gradient(160deg, #0f1c3d, #0a1430);
+}
+
+.st::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(143, 178, 238, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 178, 238, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, #000, transparent 85%);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, #000, transparent 85%);
+}
+
+.st::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  height: 38%;
+  background: linear-gradient(to bottom, rgba(10, 20, 48, 0), rgba(10, 20, 48, 0.92));
+  pointer-events: none;
+}
+
+.st-glow {
+  background:
+    radial-gradient(ellipse 45% 40% at 85% 10%, rgba(150, 190, 255, 0.2), transparent 70%),
+    radial-gradient(ellipse 40% 40% at 5% 95%, rgba(106, 126, 224, 0.2), transparent 70%);
+}
+
+.st-win {
+  background: #0d1936;
+  border-radius: 12px 12px 0 0;
+  box-shadow:
+    0 30px 60px rgba(2, 6, 18, 0.65),
+    0 0 40px rgba(110, 168, 255, 0.14),
+    0 0 0 1px rgba(169, 207, 240, 0.28);
+}
+
+.st-bar {
+  background: linear-gradient(180deg, #16295a, #101f46);
+  border-bottom: 1px solid rgba(169, 207, 240, 0.16);
+}
+
+.st-page img {
+  filter: saturate(0.92) brightness(0.96);
+}
+
+.st-tag {
+  z-index: 2;
+  color: #cfe0ff;
+  background: rgba(10, 20, 48, 0.8);
+  border: 1px solid rgba(169, 207, 240, 0.3);
+}
+
+/* Light front pages are re-toned so every thumbnail sits in the dark theme */
+.st--sustain .st-page img {
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.85) brightness(0.95);
+}
+
+.st--sustain .st-page,
+.st--josyam .st-page,
+.st--projxon-orka .st-page,
+.st--glasshouse .st-page {
+  background: #0b1430;
+}
+
+.st--projxon-orka .st-page img { object-position: left top; }
+
+.st--sustain .st-page { position: relative; }
+.st--sustain .st-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 82, 176, 0.75);
+  mix-blend-mode: color;
+  pointer-events: none;
+}
+
+/* ── Drawn thumbnails: the art fills the frame ── */
+.st svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.st::before,
+.st::after,
+.st-glow { display: none; }

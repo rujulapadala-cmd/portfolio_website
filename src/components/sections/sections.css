@@ -1,0 +1,220 @@
+/* ── Experience timeline and Skills ── */
+.portfolio .ex {
+  background: linear-gradient(180deg, #0d1936 0%, #0b142b 100%);
+}
+
+.portfolio .sk {
+  background: #081023;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tl {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* the vertical line sits on the boundary between the date and the details */
+.tl::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 168px;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(169, 207, 240, 0.5), rgba(169, 207, 240, 0.12));
+}
+
+.tl-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  padding-bottom: 40px;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 168px;
+  width: 11px;
+  height: 11px;
+  background: #0b142b;
+  border: 2px solid #a9cff0;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.tl-date {
+  padding: 4px 32px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  text-align: right;
+  color: #9fb0cf;
+}
+
+.tl-body {
+  padding-left: 36px;
+}
+
+.tl-role {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #f1f6fd;
+}
+
+.tl-role--sub {
+  margin-top: 2px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #c0c7dc;
+}
+
+.tl-org {
+  margin: 4px 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a9cff0;
+}
+
+.tl-summary {
+  max-width: 62ch;
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #c0c7dc;
+}
+
+.tl-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tl-points li {
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #e3ebf8;
+  background: #112044;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+.sk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.sk-group {
+  height: 100%;
+  padding: 24px 26px 26px;
+  background: linear-gradient(160deg, #13244f, #0f1c3d);
+  border: 1px solid rgba(143, 178, 238, 0.2);
+  border-radius: 20px;
+}
+
+.sk-group h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #f1f6fd;
+}
+
+.sk-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sk-group li {
+  padding: 6px 13px;
+  font-size: 13.5px;
+  color: #dbe6fa;
+  background: rgba(169, 207, 240, 0.08);
+  border: 1px solid rgba(169, 207, 240, 0.2);
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .tl::before { left: 5px; }
+
+  .tl-item {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 28px;
+    padding-bottom: 34px;
+  }
+
+  .tl-item::before { left: 5px; }
+
+  .tl-date {
+    padding: 0 0 6px;
+    text-align: left;
+  }
+
+  .tl-body { padding-left: 0; }
+
+  .tl-role { font-size: 1.3rem; }
+
+  .sk-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ── About: portrait above the stats card ── */
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(143, 178, 238, 0.28);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(2, 6, 18, 0.4);
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 4.4;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (max-width: 960px) {
+  .about-photo { max-width: 420px; }
+}
+
+@media (min-width: 961px) {
+  .about-grid {
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-areas:
+      'text photo'
+      'card photo';
+    align-items: start;
+  }
+
+  .about-side { display: contents; }
+  .about-text { grid-area: text; }
+  .about-photo { grid-area: photo; }
+  .about-card { grid-area: card; }
+  .about-photo img { aspect-ratio: 4 / 5; }
+}

@@ -1,20 +1,20 @@
 /* ── Layout & tokens ── */
 .portfolio {
-  --cream: #fff9fa;
-  --cream-muted: #f8f4f5;
-  --blush: #f5dce0;
-  --dusty: #efcfd4;
-  --accent: #e18aaa;
-  --accent-deep: #c96d94;
-  --lavender: #dccfed;
+  --cream: #fafcfe;
+  --cream-muted: #f5f6f7;
+  --blush: #e0e7f1;
+  --dusty: #cfe0ef;
+  --accent: #8ab8e1;
+  --accent-deep: #6d9ec9;
+  --lavender: #cfd6ed;
   --text: #2b2b2b;
   --text-muted: #6e6e73;
-  --border: rgba(225, 138, 170, 0.18);
+  --border: rgba(138, 184, 225, 0.18);
   --glass: rgba(255, 255, 255, 0.55);
   --radius: 20px;
   --radius-sm: 12px;
-  --shadow: 0 8px 32px rgba(225, 138, 170, 0.1);
-  --shadow-hover: 0 20px 56px rgba(225, 138, 170, 0.18);
+  --shadow: 0 8px 32px rgba(138, 184, 225, 0.1);
+  --shadow-hover: 0 20px 56px rgba(138, 184, 225, 0.18);
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -31,7 +31,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 249, 250, 0.75);
+  background: rgba(250, 252, 254, 0.75);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--border);
@@ -148,16 +148,16 @@
 .btn-primary {
   color: #fff;
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
-  box-shadow: 0 6px 24px rgba(225, 138, 170, 0.35);
+  box-shadow: 0 6px 24px rgba(138, 184, 225, 0.35);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 12px 36px rgba(225, 138, 170, 0.45);
+  box-shadow: 0 12px 36px rgba(138, 184, 225, 0.45);
 }
 
 .btn-secondary {
   color: var(--accent-deep);
-  background: rgba(245, 220, 224, 0.6);
+  background: rgba(224, 231, 241, 0.6);
   border: 1px solid var(--border);
   backdrop-filter: blur(8px);
 }
@@ -393,9 +393,9 @@
   text-align: center;
   color: var(--text);
   background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(225, 138, 170, 0.2);
+  border: 1px solid rgba(138, 184, 225, 0.2);
   border-radius: 980px;
-  box-shadow: 0 4px 16px rgba(225, 138, 170, 0.12);
+  box-shadow: 0 4px 16px rgba(138, 184, 225, 0.12);
   backdrop-filter: blur(8px);
   transform: translate(-50%, -50%);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -403,7 +403,7 @@
 }
 
 .design-universe__node-wrap:hover .design-universe__node {
-  box-shadow: 0 8px 24px rgba(225, 138, 170, 0.25);
+  box-shadow: 0 8px 24px rgba(138, 184, 225, 0.25);
   transform: translate(-50%, -50%) scale(1.06);
 }
 
@@ -446,8 +446,8 @@
   padding: 20px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  border: 1px solid rgba(225, 138, 170, 0.25);
-  box-shadow: 0 8px 32px rgba(225, 138, 170, 0.2);
+  border: 1px solid rgba(138, 184, 225, 0.25);
+  box-shadow: 0 8px 32px rgba(138, 184, 225, 0.2);
   width: 100%;
   height: 100%;
   display: flex;
@@ -630,12 +630,12 @@
   color: var(--text);
   background: rgba(255, 255, 255, 0.5);
   border-radius: 14px;
-  border: 1px solid rgba(225, 138, 170, 0.1);
+  border: 1px solid rgba(138, 184, 225, 0.1);
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .exploring-card__item:hover {
-  background: rgba(245, 220, 224, 0.5);
+  background: rgba(224, 231, 241, 0.5);
   transform: translateX(4px);
 }
 
@@ -690,7 +690,7 @@
   --purple: var(--accent);
   --purple-dark: var(--accent-deep);
   --purple-light: var(--blush);
-  --lavender: #dccfed;
+  --lavender: #cfd6ed;
 }
 
 /* ── About ── */
@@ -739,7 +739,7 @@
   font-size: 36px;
   font-weight: 700;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--purple) 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, var(--purple) 0%, #8ba5fa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -809,9 +809,9 @@
 
 .mockup-bar {
   height: 28px;
-  background: rgba(245, 220, 224, 0.6);
+  background: rgba(224, 231, 241, 0.6);
   border-radius: 12px 12px 0 0;
-  border-bottom: 1px solid rgba(225, 138, 170, 0.15);
+  border-bottom: 1px solid rgba(138, 184, 225, 0.15);
 }
 
 .mockup-content {
@@ -819,8 +819,8 @@
   height: calc(100% - 68px);
   background: linear-gradient(
     180deg,
-    rgba(220, 207, 237, 0.3) 0%,
-    rgba(245, 220, 224, 0.2) 100%
+    rgba(207, 214, 237, 0.3) 0%,
+    rgba(224, 231, 241, 0.2) 100%
   );
   border-radius: 8px;
 }
